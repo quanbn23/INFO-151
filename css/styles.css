@@ -13,6 +13,8 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --purple: #6a2cc6;
+  --skyblue: #42B4EE;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -331,12 +333,42 @@ template {
 /* =============
     Base
 ============= */
+body {
+  background-color: var(--purple);
+}
+
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
+.blue-button {
+  background-color: var(--skyblue);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+}
+
 /* =============
     Forms
 ============= */
@@ -363,6 +395,26 @@ textarea {
 /* =============
     Header
 ============= */
+header nav ul li a {
+  color: var(--white);
+}
+header nav ul #trial a {
+  background-color: var(--skyblue);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
 /* =============
     Footer
 ============= */
+/* =============
+    Hero
+============= */
+#hero {
+  margin-top: 78px;
+  color: var(--white);
+}
+#hero p {
+  color: rgba(255, 255, 255, 0.8);
+}
