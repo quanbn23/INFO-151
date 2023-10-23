@@ -13,6 +13,9 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --purple: #6a2cc6;
+  --skyblue: #42B4EE;
+  --lightblue: #ecf8fd;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -334,9 +337,42 @@ template {
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
+.blue-button {
+  background-color: var(--skyblue);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.inverted-blue-button {
+  background-color: var(--lightblue);
+  color: var(--skyblue);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+}
+
 /* =============
     Forms
 ============= */
@@ -366,3 +402,48 @@ textarea {
 /* =============
     Footer
 ============= */
+/* =============
+    How
+============= */
+#how .header {
+  color: var(--black);
+  margin-top: 181px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#how .slider-heading {
+  color: var(--black);
+  margin-bottom: 60px;
+  text-align: center;
+}
+#how ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+#how ul li {
+  margin: 0px 30px 50px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+#how ul li h2 {
+  color: rgba(0, 0, 0, 0.7);
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+#how ul li h1 {
+  color: var(--black);
+  padding-bottom: 40px;
+}
+#how ul li p {
+  color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 40px;
+}

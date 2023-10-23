@@ -1,3 +1,21 @@
 /* =============
     Buttons
 ============= */
+
+.blue-button {
+    background-color: var(--skyblue);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.inverted-blue-button {
+    background-color: var(--lightblue);
+    color: var(--skyblue);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+button {
+    border: none;
+}
