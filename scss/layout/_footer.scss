@@ -1,3 +1,37 @@
 /* =============
     Footer
 ============= */
+
+footer {
+    background-color: var(--darkblue);
+    #footer-top {
+        padding: 100px 230px 79px 230px;
+        color: rgba(255,255,255,0.7);
+        section {
+            padding: 20px;
+            h2 {
+                color: var(--white);
+            }
+            p {
+                color: rgba(255,255,255,0.7);
+            }
+            #send-button {
+                background-color: var(--skyblue);
+                color: var(--white);
+                padding: 15px 30px;
+                border-radius: 5px;
+            }
+        }
+    }
+    #footer-bottom {
+        p {
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 0px 230px 35px 230px;
+        }
+    }
+    .horizontal-line {
+        width: 70%;
+        text-align: center;
+    }
+}
