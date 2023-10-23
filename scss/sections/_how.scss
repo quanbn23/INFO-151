@@ -28,7 +28,6 @@
             h2 {
                 color: rgba(0,0,0,0.7);
                 padding-top: 50px;
-                padding-bottom: 20px;
             }
             h1 {
                 color: var(--black);
@@ -37,6 +36,21 @@
             p {
                 color: rgba(0,0,0,0.7);
                 padding-bottom: 40px;
+            }
+            hr {
+                width: 40%;
+            }
+        }
+        .plan2 {
+            background-color: var(--purple);
+            h2 {
+                color: var(--white);
+            }
+            h1 {
+                color: var(--white); 
+            }
+            hr {
+                width: 40%;
             }
         }
     }

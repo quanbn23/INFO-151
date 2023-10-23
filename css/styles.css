@@ -14,6 +14,7 @@ html {
   --black: #000000;
   --white: #ffffff;
   --purple: #6a2cc6;
+  --borderpurple: #5A20AF;
   --skyblue: #42B4EE;
   --lightblue: #ecf8fd;
 }
@@ -437,7 +438,6 @@ textarea {
 #how ul li h2 {
   color: rgba(0, 0, 0, 0.7);
   padding-top: 50px;
-  padding-bottom: 20px;
 }
 #how ul li h1 {
   color: var(--black);
@@ -446,4 +446,19 @@ textarea {
 #how ul li p {
   color: rgba(0, 0, 0, 0.7);
   padding-bottom: 40px;
+}
+#how ul li hr {
+  width: 40%;
+}
+#how ul .plan2 {
+  background-color: var(--purple);
+}
+#how ul .plan2 h2 {
+  color: var(--white);
+}
+#how ul .plan2 h1 {
+  color: var(--white);
+}
+#how ul .plan2 hr {
+  width: 40%;
 }
