@@ -16,52 +16,61 @@
 
 <body>
     <div id="how">
-        <h1 class="header">Choose your best pricing plan</h1>
-        <h2 class="slider-heading">Added for Monthly <label class="switch">
+        <h1 class="intro-heading">Choose your best pricing plan</h1>
+        <p class="slider-heading">Added for Monthly <label class="switch">
             <input type="checkbox" checked>
             <span class="slider round"></span>
-        </label> Yearly</h2>
+        </label> Yearly</p>
 
         <ul>
-            <li class="plan1and3">
+            <li class="plans">
                 <h2>Start-up</h2>
-                <hr>
+                <img src="img/line.svg" alt="arrow line">
                 <h1>$10/mo</h1>
-                <p>Easy Customizable <br> Commercia license <br> Signal user license <br> Hotline support 24/7</p>
                 <ul>
-                    <li>
-                        <button class="inverted-blue-button">TRY THIS PACKAGE</button>
-                    </li>
+                    <li>Easy Customizable</li>
+                    <li>Commercia license</li>
+                    <li>Signal user license</li>
+                    <li>Hotline support 24/7</li>
                 </ul>
+                <button class="inverted-blue-button">TRY THIS PACKAGE</button>
             </li>
 
-            <li class="plan2">
-                <h2>Classic</h2>
-                <hr>
-                <h1>$30/mo</h1>
-                <p>Easy Customizable <br> Commercia license <br> 5 user license <br> Hotline support 24/7</p>
-                <ul>
-                    <li>
+            <li class="plans" id="plan2">
+                <section>
+                    <section id="purple-top">
+                        <h2>Classic</h2>
+                        <img src="img/line-white.svg" alt="arrow line">
+                        <h1>$30/mo</h1>
+                    </section>
+                    <section id="purple-bottom">
+                        <ul>
+                            <li>Easy Customizable</li>
+                            <li>Commercia license</li>
+                            <li>5 user license</li>
+                            <li>Hotline support 24/7</li>
+                        </ul>
                         <button class="blue-button">TRY THIS PACKAGE</button>
-                    </li>
-                </ul>
+                    </section>
+                </section>
             </li>
 
-            <li class="plan1and3">
+            <li class="plans">
                 <h2>Premium</h2>
-                <hr>
+                <img src="img/line.svg" alt="arrow line">
                 <h1>$49/mo</h1>
-                <p>Easy Customizable <br> Commercia license <br> 10 user license <br> Hotline support 24/7</p>
                 <ul>
-                    <li>
-                        <button class="inverted-blue-button">TRY THIS PACKAGE</button>
-                    </li>
+                    <li>Easy Customizable</li>
+                    <li>Commercia license</li>
+                    <li>10 user license</li>
+                    <li>Hotline support 24/7</li>
                 </ul>
+                <button class="inverted-blue-button">TRY THIS PACKAGE</button>
             </li>
         </ul>
     </div>
 
-    <div>
+    <div id="validation-button">
         <a href="https://validator.w3.org/nu/?doc=https://week-4-plans--info-151-900.netlify.app/" target="_blank">
             <img src="img/html-logo.svg" alt="Valid HTML 5">
         </a>

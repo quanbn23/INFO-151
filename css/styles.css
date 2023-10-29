@@ -14,7 +14,6 @@ html {
   --black: #000000;
   --white: #ffffff;
   --purple: #6a2cc6;
-  --borderpurple: #5A20AF;
   --skyblue: #42B4EE;
   --lightblue: #ecf8fd;
 }
@@ -335,6 +334,10 @@ template {
 /* =============
     Base
 ============= */
+#validation-button {
+  margin-top: 100px;
+}
+
 /* =============
     Typography
 ============= */
@@ -406,7 +409,7 @@ textarea {
 /* =============
     How
 ============= */
-#how .header {
+#how .intro-heading {
   color: var(--black);
   margin-top: 181px;
   margin-bottom: 30px;
@@ -418,47 +421,40 @@ textarea {
   text-align: center;
 }
 #how ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style: none;
-  padding: 0;
+  margin-top: 40px;
 }
-#how ul li {
-  margin: 0px 30px 50px 30px;
-  border-radius: 10px;
+#how .plans {
   display: inline-block;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  border-radius: 10px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+          box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+  margin: 30px;
+  padding: 50px;
 }
-#how ul li h2 {
-  color: rgba(0, 0, 0, 0.7);
-  padding-top: 50px;
+#how .plans img {
+  margin: 13px 0 7px 0;
 }
-#how ul li h1 {
-  color: var(--black);
-  padding-bottom: 40px;
+#how .plans button {
+  margin-top: 50px;
 }
-#how ul li p {
-  color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 40px;
+#how #plan2 {
+  padding: 0px;
+  border-radius: 10px;
+  border: 1px solid var(--purple);
 }
-#how ul li hr {
-  width: 40%;
-}
-#how ul .plan2 {
+#how #plan2 #purple-top {
+  color: var(--white);
   background-color: var(--purple);
+  padding: 50px 50px 0 50px;
+  border-radius: 10px;
 }
-#how ul .plan2 h2 {
-  color: var(--white);
+#how #plan2 #purple-top img {
+  margin: 13px 0 7px 0;
 }
-#how ul .plan2 h1 {
-  color: var(--white);
+#how #plan2 #purple-bottom {
+  padding: 0px 50px 50px 50px;
 }
-#how ul .plan2 hr {
-  width: 40%;
+#how #plan2 #purple-bottom ul li {
+  color: var(--black);
 }
