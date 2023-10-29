@@ -336,7 +336,7 @@ template {
     Base
 ============= */
 #validation-logo {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 /* =============
@@ -360,6 +360,10 @@ ul {
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+}
+
 /* =============
     Forms
 ============= */
@@ -391,32 +395,55 @@ textarea {
 ============= */
 footer {
   background-color: var(--darkblue);
+  padding: 100px 0px 0px 35px;
 }
 footer #footer-top {
-  padding: 100px 230px 79px 230px;
+  margin: 100px 230px 79px 230px;
   color: rgba(255, 255, 255, 0.7);
 }
-footer #footer-top section {
-  padding: 20px;
-}
-footer #footer-top section h2 {
+footer #footer-top #resources h2 {
+  margin-bottom: 30px;
   color: var(--white);
 }
-footer #footer-top section p {
+footer #footer-top #resources ul li {
   color: rgba(255, 255, 255, 0.7);
 }
-footer #footer-top section #send-button {
+footer #footer-top #useful-links h2 {
+  margin-bottom: 30px;
+  color: var(--white);
+}
+footer #footer-top #useful-links ul li {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer #footer-top #newsletter h2 {
+  margin-bottom: 30px;
+  color: var(--white);
+}
+footer #footer-top #newsletter p {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer #footer-top #newsletter form {
+  display: inline-block;
+}
+footer #footer-top #newsletter form input {
+  border: 1px solid rgba(255, 255, 255, 0.3137254902);
+  border-right: none;
+  background-color: var(--darkblue);
+  padding: 13px 3px;
+  border-radius: 5px 0px 0px 5px;
+}
+footer #footer-top #newsletter form #send-button {
+  color: var(--white);
   background-color: var(--skyblue);
-  color: var(--white);
   padding: 15px 30px;
-  border-radius: 5px;
+  margin-left: -3px;
+  border-radius: 0 5px 5px 0;
+}
+footer #footer-bottom {
+  margin-top: 30px;
 }
 footer #footer-bottom p {
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  padding: 0px 230px 35px 230px;
-}
-footer .horizontal-line {
-  width: 70%;
-  text-align: center;
+  padding-bottom: 35px;
 }

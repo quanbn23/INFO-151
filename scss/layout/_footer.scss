@@ -4,34 +4,65 @@
 
 footer {
     background-color: var(--darkblue);
+    padding: 100px 0px 0px 35px;
     #footer-top {
-        padding: 100px 230px 79px 230px;
+        margin: 100px 230px 79px 230px;
         color: rgba(255,255,255,0.7);
-        section {
-            padding: 20px;
+        #resources {
             h2 {
+                margin-bottom: 30px;
+                color: var(--white);
+            }
+            ul {
+                li {
+                    color: rgba(255,255,255,0.7);
+                }
+            }
+        }
+        #useful-links {
+            h2 {
+                margin-bottom: 30px;
+                color: var(--white);
+            }
+            ul {
+                li {
+                    color: rgba(255,255,255,0.7);
+                }
+            }
+        }
+        #newsletter {
+            h2 {
+                margin-bottom: 30px;
                 color: var(--white);
             }
             p {
                 color: rgba(255,255,255,0.7);
             }
-            #send-button {
-                background-color: var(--skyblue);
-                color: var(--white);
-                padding: 15px 30px;
-                border-radius: 5px;
+            form {
+                display: inline-block;
+                input{
+                    border: 1px solid #ffffff50;
+                    border-right: none;
+                    background-color: var(--darkblue);
+                    padding: 13px 3px;
+                    border-radius: 5px 0px 0px 5px;
+                }
+                #send-button {
+                    color: var(--white);
+                    background-color: var(--skyblue);
+                    padding: 15px 30px;
+                    margin-left: -3px;
+                    border-radius: 0 5px 5px 0;
+                }
             }
         }
     }
     #footer-bottom {
+        margin-top: 30px;
         p {
             color: rgba(255,255,255,0.7);
             text-align: center;
-            padding: 0px 230px 35px 230px;
+            padding-bottom: 35px;
         }
-    }
-    .horizontal-line {
-        width: 70%;
-        text-align: center;
     }
 }
