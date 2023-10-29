@@ -3,9 +3,16 @@
 ============= */
 
 #hero {
-    margin-top: 78px;
-    color: var(--white);
-    p {
-        color: rgba(255,255,255,0.8);
+    background-color: var(--purple);
+    #content {
+        margin-top: 78px;
+        h1 {
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+        p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 35px;
+        }
     }
 }
