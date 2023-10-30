@@ -4,15 +4,50 @@
 
 #hero {
     background-color: var(--purple);
+    #logo {
+        display: flex;
+        align-items: center;
+    }
     #content {
         margin-top: 78px;
-        h1 {
-            color: var(--white);
-            margin-bottom: 25px;
+        display: flex;
+        div {
+            .first-line {
+                color: var(--white);
+                font-weight: 600;
+                font-size: rem-calc(62);
+                margin-left: 230px;
+                margin-top: 146px;
+            }
+            .second-line {
+                color: var(--white);
+                font-weight: 600;
+                font-size: rem-calc(62);
+                margin-left: 230px;
+            }
+            .third-line {
+                color: var(--white);
+                margin-bottom: 25px;
+                font-weight: 600;
+                font-size: rem-calc(62);
+                margin-left: 230px;
+            }
+            p {
+                color: rgba(255,255,255,0.8);
+                margin-bottom: 35px;
+                font-weight: 400;
+                font-size: rem-calc(18);
+                margin-left: 230px;
+            }
         }
-        p {
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 35px;
+        div {
+            img {
+                margin-top: 78px;
+                margin-right: 83px;
+                width: 680px;
+                height: 501px;
+                margin-bottom: 182px;
+            }
         }
     }
 }

@@ -3,21 +3,8 @@
 ============= */
 
 header {
-    nav {
-        ul {
-            li {
-                a {
-                    color: var(--white);
-                }
-            }
-            #trial {
-                a {
-                    background-color: var(--skyblue);
-                    color: var(--white);
-                    padding: 15px 30px;
-                    border-radius: 5px;
-                }
-            }
-        }
+    #logo-container {
+        display: flex;
+        margin-left: auto;
     }
 }
