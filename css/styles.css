@@ -414,11 +414,14 @@ footer {
   background-color: var(--darkblue);
 }
 footer #footer-top {
-  padding: 100px 210px 79px 210px;
+  padding: 100px 230px 79px 230px;
   color: rgba(255, 255, 255, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 footer #footer-top #first-section {
   margin-right: 102px;
@@ -434,7 +437,7 @@ footer #footer-top #first-section p {
   display: -ms-flexbox;
   display: flex;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 footer #footer-top #first-section #social-media-links {
   margin-top: 31px;
@@ -524,7 +527,7 @@ footer #footer-top #newsletter h2 {
 footer #footer-top #newsletter p {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 footer #footer-top #newsletter form {
   margin-top: 25px;
