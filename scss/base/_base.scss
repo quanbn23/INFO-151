@@ -3,5 +3,16 @@
 ============= */
 
 #validation-button {
-    margin-top: 100px;
+    text-align: center;
+}
+
+body {
+    main {
+        display: grid;
+        grid-template-columns: auto 1140px auto;
+        grid-template-areas: ". plans .";
+        #grid {
+            grid-area: plans;
+        }
+    }
 }

@@ -335,7 +335,20 @@ template {
     Base
 ============= */
 #validation-button {
-  margin-top: 100px;
+  text-align: center;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". plans .";
+}
+body main #grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: plans;
 }
 
 /* =============
@@ -370,26 +383,13 @@ ul {
   border-radius: 5px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  font-weight: 500;
-  font-size: 1.125rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .blue-button:hover {
   background-color: var(--purple);
   color: var(--white);
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 1.125rem;
-}
-
-.inverted-blue-button:hover {
-  background-color: var(--skyblue);
-  color: var(--lightblue);
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 1.125rem;
 }
 
 .inverted-blue-button {
@@ -397,10 +397,15 @@ ul {
   color: var(--skyblue);
   padding: 15px 30px;
   border-radius: 5px;
-  font-weight: 500;
-  font-size: 1.125rem;
+  font-weight: 400;
+  font-size: 1rem;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+}
+
+.inverted-blue-button:hover {
+  background-color: var(--skyblue);
+  color: var(--lightblue);
 }
 
 button {
@@ -439,7 +444,7 @@ textarea {
 /* =============
     How
 ============= */
-#how .intro-heading {
+#grid #headings h1 {
   color: var(--black);
   margin-top: 181px;
   margin-bottom: 30px;
@@ -447,74 +452,154 @@ textarea {
   font-weight: 600;
   font-size: 2.125rem;
 }
-#how .slider-heading {
+#grid #headings p {
+  font-size: 1.375rem;
   color: var(--black);
   margin-bottom: 60px;
   text-align: center;
   font-weight: 500;
-  font-size: 1.25rem;
 }
-#how ul {
+#grid #headings p .switch {
+  position: relative;
+  display: inline-block;
+  width: 83px;
+  height: 33px;
+  border: 0.5px solid var(--skyblue);
+  border-radius: 20px;
+  margin-left: 13px;
+  margin-right: 15px;
+}
+#grid #headings p .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#grid #headings p .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(66, 181, 238, 0.2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+#grid #headings p .slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 36px;
+  left: 5px;
+  bottom: 5px;
+  background-color: var(--skyblue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+#grid #headings p input:checked + .slider {
+  background-color: rgba(66, 181, 238, 0.2);
+}
+#grid #headings p input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+#grid #headings p input:checked + .slider:before {
+  -webkit-transform: translateX(37px);
+  transform: translateX(37px);
+}
+#grid #headings p .slider.round {
+  border-radius: 20px;
+}
+#grid #headings p .slider.round:before {
+  border-radius: 20px;
+}
+#grid #headings span {
+  color: rgba(0, 0, 0, 0.7);
+}
+#grid ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-top: 40px;
+  margin-bottom: 181px;
   text-align: center;
   text-decoration: none;
   list-style: none;
 }
-#how .plans {
-  display: inline-block;
+#grid ul .plans {
   border-radius: 10px;
   background-color: var(--white);
-  -webkit-box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
-          box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
-  margin-right: 30px;
-  padding: 50px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 50px 69px 50px 68px;
 }
-#how .plans img {
+#grid ul .plans img {
   margin: 13px 0 7px 0;
 }
-#how .plans h1 {
-  font-weight: 600;
-  font-size: 2.125rem;
+#grid ul .plans h1 {
+  font-size: 2rem;
+  font-weight: 500;
 }
-#how .plans h2 {
+#grid ul .plans h1 span {
+  font-size: 2.75rem;
   font-weight: 600;
-  font-size: 1.875rem;
 }
-#how .plans li {
-  margin-bottom: 10px;
+#grid ul .plans h2 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+#grid ul .plans .plan-features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#grid ul .plans .plan-features li {
   color: var(--black);
   font-weight: 400;
   font-size: 0.875rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+  line-height: 0.5;
 }
-#how .plans button {
-  margin-top: 30px;
-}
-#how #plan2 {
+#grid ul #plan2 {
   padding: 0px;
   border-radius: 10px;
   border: 1px solid var(--purple);
 }
-#how #plan2 #purple-top {
-  color: var(--white);
+#grid ul #plan2 #purple-top {
   background-color: var(--purple);
   padding: 50px 50px 0 50px;
   border-radius: 10px;
+  color: var(--white);
 }
-#how #plan2 #purple-top h1 {
+#grid ul #plan2 #purple-top h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+#grid ul #plan2 #purple-top h1 span {
+  font-size: 2.75rem;
   font-weight: 600;
-  font-size: 2.125rem;
 }
-#how #plan2 #purple-top h2 {
-  font-weight: 600;
-  font-size: 1.875rem;
+#grid ul #plan2 #purple-top h2 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--white);
 }
-#how #plan2 #purple-top img {
+#grid ul #plan2 #purple-top img {
   margin: 13px 0 7px 0;
 }
-#how #plan2 #purple-bottom {
+#grid ul #plan2 #purple-bottom {
   padding: 0px 50px 50px 50px;
 }
-#how #plan2 #purple-bottom ul li {
+#grid ul #plan2 #purple-bottom ul li {
   color: var(--black);
   font-weight: 400;
   font-size: 0.875rem;

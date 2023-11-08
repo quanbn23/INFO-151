@@ -8,26 +8,13 @@
     padding: 15px 30px;
     border-radius: 5px;
     transition: .25s;
-    font-weight: 500;
-    font-size: rem-calc(18);
+    font-weight: 400;
+    font-size: rem-calc(16);
 }
 
 .blue-button:hover {
     background-color: var(--purple);
     color: var(--white);
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: rem-calc(18);
-}
-
-.inverted-blue-button:hover {
-    background-color: var(--skyblue);
-    color: var(--lightblue);
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: rem-calc(18);
 }
 
 .inverted-blue-button {
@@ -35,9 +22,14 @@
     color: var(--skyblue);
     padding: 15px 30px;
     border-radius: 5px;
-    font-weight: 500;
-    font-size: rem-calc(18);
+    font-weight: 400;
+    font-size: rem-calc(16);
     transition: .25s;
+}
+
+.inverted-blue-button:hover {
+    background-color: var(--skyblue);
+    color: var(--lightblue);
 }
 
 button {
