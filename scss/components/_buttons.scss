@@ -2,27 +2,23 @@
     Buttons
 ============= */
 
-.blue-button {
+#blue-button {
+    margin-left: 60px;
+    font-weight: 500;
+    font-size: rem-calc(18);
     background-color: var(--skyblue);
     color: var(--white);
     padding: 15px 30px;
     border-radius: 5px;
-    margin-left: 60px;
-    margin-right: 230px;
     transition: .25s;
-    font-weight: 500;
-    font-size: rem-calc(18);
 }
 
-.blue-button:hover {
-    font-weight: 500;
-    font-size: rem-calc(20);
+#blue-button:hover {
     background-color: rgba(255,255,255,0.8);
     color: var(--skyblue);
 }
 
 .blue-button2 {
-    margin-left: 230px;
     font-weight: 500;
     font-size: rem-calc(20);
     background-color: var(--skyblue);
@@ -34,8 +30,6 @@
 .blue-button2:hover {
     background-color: rgba(255,255,255,0.8);
     color: var(--skyblue);
-    font-weight: 500;
-    font-size: rem-calc(20);
 }
 
 button {

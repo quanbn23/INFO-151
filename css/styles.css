@@ -335,6 +335,23 @@ template {
 ============= */
 #validation-button {
   margin-top: 100px;
+  text-align: center;
+}
+
+body {
+  background-color: var(--purple);
+}
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". hero .";
+}
+body main #hero {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: hero;
 }
 
 /* =============
@@ -362,28 +379,24 @@ ul {
 /* =============
     Buttons
 ============= */
-.blue-button {
+#blue-button {
+  margin-left: 60px;
+  font-weight: 500;
+  font-size: 1.125rem;
   background-color: var(--skyblue);
   color: var(--white);
   padding: 15px 30px;
   border-radius: 5px;
-  margin-left: 60px;
-  margin-right: 230px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  font-weight: 500;
-  font-size: 1.125rem;
 }
 
-.blue-button:hover {
-  font-weight: 500;
-  font-size: 1.25rem;
+#blue-button:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: var(--skyblue);
 }
 
 .blue-button2 {
-  margin-left: 230px;
   font-weight: 500;
   font-size: 1.25rem;
   background-color: var(--skyblue);
@@ -397,8 +410,6 @@ ul {
 .blue-button2:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: var(--skyblue);
-  font-weight: 500;
-  font-size: 1.25rem;
 }
 
 button {
@@ -430,11 +441,11 @@ textarea {
 ============= */
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,9 +457,7 @@ nav ul {
           align-items: center;
 }
 nav ul li {
-  list-style: none;
   margin-left: 40px;
-  margin-right: 0px;
 }
 nav ul li a:link, nav ul li a:visited {
   color: rgba(255, 255, 255, 0.8);
@@ -464,11 +473,12 @@ nav ul li a:hover, nav ul li a:active {
 /* =============
     Header
 ============= */
-header #logo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+header {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% auto;
+  grid-template-columns: 32% auto;
 }
 
 /* =============
@@ -477,54 +487,28 @@ header #logo-container {
 /* =============
     Hero
 ============= */
-#hero {
-  background-color: var(--purple);
-}
-#hero #logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#hero #content {
-  margin-top: 78px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#hero #content div .first-line {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 3.875rem;
-  margin-left: 230px;
+#content {
   margin-top: 146px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 44% auto;
+  grid-template-columns: 44% auto;
 }
-#hero #content div .second-line {
-  color: var(--white);
+#content div h1 {
+  font-size: 3.75rem;
   font-weight: 600;
-  font-size: 3.875rem;
-  margin-left: 230px;
-}
-#hero #content div .third-line {
   color: var(--white);
-  margin-bottom: 25px;
-  font-weight: 600;
   font-size: 3.875rem;
-  margin-left: 230px;
 }
-#hero #content div p {
+#content div p {
   color: rgba(255, 255, 255, 0.8);
+  margin-top: 25px;
   margin-bottom: 35px;
   font-weight: 400;
   font-size: 1.125rem;
-  margin-left: 230px;
+  line-height: 1.5;
 }
-#hero #content div img {
-  margin-top: 78px;
-  margin-right: 83px;
-  width: 680px;
-  height: 501px;
-  margin-bottom: 182px;
+#content aside img {
+  margin-top: -68px;
+  margin-left: 37px;
 }

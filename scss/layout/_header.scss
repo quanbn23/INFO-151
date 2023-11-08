@@ -3,8 +3,7 @@
 ============= */
 
 header {
-    #logo-container {
-        display: flex;
-        margin-left: auto;
-    }
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 32% auto;
 }
