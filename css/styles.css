@@ -336,7 +336,8 @@ template {
     Base
 ============= */
 #validation-logo {
-  margin-top: 100px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 ul {
@@ -414,23 +415,32 @@ footer {
   background-color: var(--darkblue);
 }
 footer #footer-top {
-  padding: 100px 230px 79px 230px;
   color: rgba(255, 255, 255, 0.7);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". content .";
+  padding-top: 100px;
+  padding-bottom: 75px;
+}
+footer #footer-top #footer-top-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 18% 21.5% auto;
+  grid-template-columns: 33% 18% 21.5% auto;
 }
 footer #footer-top #first-section {
   margin-right: 102px;
 }
 footer #footer-top #first-section img {
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
 }
 footer #footer-top #first-section p {
   display: -webkit-box;
@@ -438,6 +448,7 @@ footer #footer-top #first-section p {
   display: flex;
   font-weight: 400;
   font-size: 0.9375rem;
+  line-height: 1.6;
 }
 footer #footer-top #first-section #social-media-links {
   margin-top: 31px;
@@ -481,18 +492,19 @@ footer #footer-top #resources h2 {
 }
 footer #footer-top #resources ul li {
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 footer #footer-top #resources ul li a:link, footer #footer-top #resources ul li a:visited {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: 0.25s;
   transition: 0.25s;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 footer #footer-top #resources ul li a:hover, footer #footer-top #resources ul li a:active {
   color: var(--skyblue);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 footer #footer-top #useful-links {
   margin-right: 96px;
@@ -505,18 +517,19 @@ footer #footer-top #useful-links h2 {
 }
 footer #footer-top #useful-links ul li {
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 footer #footer-top #useful-links ul li a:link, footer #footer-top #useful-links ul li a:visited {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: 0.25s;
   transition: 0.25s;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 footer #footer-top #useful-links ul li a:hover, footer #footer-top #useful-links ul li a:active {
   color: var(--skyblue);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 footer #footer-top #newsletter h2 {
   margin-bottom: 30px;
@@ -527,20 +540,48 @@ footer #footer-top #newsletter h2 {
 footer #footer-top #newsletter p {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  margin-bottom: 25px;
 }
 footer #footer-top #newsletter form {
-  margin-top: 25px;
   display: inline-block;
 }
 footer #footer-top #newsletter form input {
-  border: 1px solid rgba(255, 255, 255, 0.3137254902);
+  border: 1px solid rgba(255, 255, 255, 0.4392156863);
+  color: var(--white);
   border-right: none;
   background-color: var(--darkblue);
-  padding: 14px 5px;
+  padding: 15px 70px 15px 30px;
   border-radius: 5px 0px 0px 5px;
   font-weight: 500;
   font-size: 1rem;
+  width: 34%;
+}
+footer #footer-top #newsletter form input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer #footer-top #newsletter form input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer #footer-top #newsletter form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer #footer-top #newsletter form input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer #footer-top #newsletter form input::placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 footer #footer-top #newsletter form #send-button {
   color: var(--white);
@@ -548,19 +589,25 @@ footer #footer-top #newsletter form #send-button {
   padding: 15px 30px;
   margin-left: -4px;
   border-radius: 0 5px 5px 0;
+  border: 1px solid var(--skyblue);
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
 }
 footer #footer-top #newsletter form #send-button:hover {
-  color: var(--white);
-  background-color: rgba(255, 255, 255, 0.3137254902);
+  color: var(--darkblue);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 15px 30px;
-  margin-left: -4px;
   border-radius: 0 5px 5px 0;
   font-weight: 500;
   font-size: 1rem;
+}
+footer hr {
+  width: 76%;
+  height: 1px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 footer #footer-bottom {
   margin-top: 30px;

@@ -5,20 +5,28 @@
 footer {
     background-color: var(--darkblue);
     #footer-top {
-        padding: 100px 230px 79px 230px;
         color: rgba(255,255,255,0.7);
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: auto 1140px auto;
+        grid-template-areas: ". content .";
+        padding-top: 100px;
+        padding-bottom: 75px;
+        #footer-top-grid-item {
+            grid-area: content;
+            display: grid;
+            grid-template-columns:  33% 18% 21.5% auto;
+        }
         #first-section {
             margin-right: 102px;
             img {
-                display: flex;
                 margin-bottom: 30px;
+                display: flex;
             }
             p {
                 display: flex;
                 font-weight: 400;
                 font-size: rem-calc(15);
+                line-height: 1.6;
             }
             #social-media-links {
                 margin-top: 31px;
@@ -55,16 +63,17 @@ footer {
             ul {
                 li {
                     margin-bottom: 10px;
+                    line-height: 1.5;
                     a:link, a:visited{
                         color: rgba(255,255,255,0.7);
                         transition: 0.25s;
                         font-weight: 400;
-                        font-size: rem-calc(16);
+                        font-size: rem-calc(18);
                     }
                     a:hover, a:active{
                         color: var(--skyblue);
                         font-weight: 400;
-                        font-size: rem-calc(16);
+                        font-size: rem-calc(18);
                     }
                 }
             }
@@ -80,15 +89,17 @@ footer {
             ul {
                 li {
                     margin-bottom: 10px;
+                    line-height: 1.5;
                     a:link, a:visited{
                         color: rgba(255,255,255,0.7);
-                        transition: 0.25s;font-weight: 400;
-                        font-size: rem-calc(16);
+                        transition: 0.25s;
+                        font-weight: 400;
+                        font-size: rem-calc(18);
                     }
                     a:hover, a:active{
                         color: var(--skyblue);
                         font-weight: 400;
-                        font-size: rem-calc(16);
+                        font-size: rem-calc(18);
                     }
                 }
             }
@@ -103,19 +114,27 @@ footer {
             p {
                 color: rgba(255,255,255,0.7);
                 font-weight: 400;
-                font-size: rem-calc(15);
+                font-size: rem-calc(14);
+                line-height: 1.75;
+                margin-bottom: 25px;
             }
             form {
-                margin-top: 25px;
                 display: inline-block;
                 input{
-                    border: 1px solid #ffffff50;
+                    border: 1px solid #ffffff70;
+                    color: var(--white);
                     border-right: none;
                     background-color: var(--darkblue);
-                    padding: 14px 5px;
+                    padding: 15px 70px 15px 30px;
                     border-radius: 5px 0px 0px 5px;
                     font-weight: 500;
                     font-size: rem-calc(16);
+                    width: 34%;
+                }
+                input::placeholder {
+                    font-weight: 400;
+                    font-size: rem-calc(14);
+                    color: rgba(255,255,255,0.8);
                 }
                 #send-button {
                     color: var(--white);
@@ -123,15 +142,15 @@ footer {
                     padding: 15px 30px;
                     margin-left: -4px;
                     border-radius: 0 5px 5px 0;
+                    border: 1px solid var(--skyblue);
                     transition: .25s;
-                    font-weight: 500;
+                    font-weight: 400;
                     font-size: rem-calc(16);
                 }
                 #send-button:hover {
-                    color: var(--white);
-                    background-color: #ffffff50;
+                    color: var(--darkblue);
+                    background-color: rgba(255,255,255,0.6);
                     padding: 15px 30px;
-                    margin-left: -4px;
                     border-radius: 0 5px 5px 0;
                     font-weight: 500;
                     font-size: rem-calc(16);
@@ -139,6 +158,14 @@ footer {
             }
         }
     }
+
+    hr {
+        width: 76%;
+        height: 1px;
+        border: none;
+        background-color: rgba(255,255,255,0.2);
+    }
+
     #footer-bottom {
         margin-top: 30px;
         p {
