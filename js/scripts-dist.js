@@ -1,0 +1,1 @@
+var navs=document.querySelector("#navs"),soccerBtn=document.querySelector("#soccerball button"),mainNavVisible=!1;function showNav(){!1===mainNavVisible?(console.log("show nav"),navs.classList.add("showNavs"),mainNavVisible=!0):(console.log("hide nav"),navs.classList.remove("showNavs"),mainNavVisible=!1)}soccerBtn.addEventListener("click",showNav);
