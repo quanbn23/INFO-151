@@ -462,6 +462,12 @@ header {
   grid-template-columns: auto 8%;
       grid-template-areas: "logo soccer" "nav nav";
 }
+@media (min-width: 768px) {
+  header {
+    -ms-grid-columns: 50% auto 4%;
+    grid-template-columns: 50% auto 4%;
+  }
+}
 header #logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;

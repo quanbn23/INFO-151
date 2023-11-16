@@ -10,6 +10,10 @@ header {
     "logo soccer"
     "nav nav";
 
+  @include md {
+    grid-template-columns: 50% auto 4%;
+  }
+
   #logo {
     grid-area: logo;
     display: flex;
