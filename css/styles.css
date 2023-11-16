@@ -336,9 +336,33 @@ template {
   margin-top: 100px;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
@@ -365,9 +389,110 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 28px 0 28px 0;
+}
+nav ul li a:link,
+nav ul li a:visited {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+nav ul li a:hover,
+nav ul li a:active {
+  color: skyblue;
+}
+nav ul #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 19px;
+}
+nav ul #buttons .sign-in-btn {
+  background-color: #024a58;
+  color: white;
+  border-radius: 8px;
+  padding: 16px 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  font-weight: 600;
+  border: 1px solid #024a58;
+  margin-right: 16px;
+}
+nav ul #buttons .sign-up-btn {
+  background-color: white;
+  color: #024a58;
+  border-radius: 8px;
+  border: 1px solid #024a58;
+  padding: 16px 24px;
+  font-weight: 600;
+}
+
 /* =============
     Header
 ============= */
+header {
+  padding: 22px 24px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 8%;
+  grid-template-columns: auto 8%;
+      grid-template-areas: "logo soccer" "nav nav";
+}
+header #logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #soccerball {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: soccer;
+}
+header nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+}
+
 /* =============
     Footer
 ============= */

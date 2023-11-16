@@ -1,3 +1,55 @@
 /* =============
     Navigation
 ============= */
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  ul {
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      //   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+      //   margin-top: 28px;
+      //   margin-bottom: 28px;
+      padding: 28px 0 28px 0;
+      a:link,
+      a:visited {
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.7);
+        transition: 0.25s;
+      }
+      a:hover,
+      a:active {
+        color: skyblue;
+      }
+    }
+    #buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      margin-top: 19px;
+      .sign-in-btn {
+        background-color: #024a58;
+        color: white;
+        border-radius: 8px;
+        padding: 16px 24px;
+        transition: 0.25s;
+        font-weight: 600;
+        border: 1px solid #024a58;
+        margin-right: 16px;
+      }
+      .sign-up-btn {
+        background-color: white;
+        color: #024a58;
+        border-radius: 8px;
+        border: 1px solid #024a58;
+        padding: 16px 24px;
+        font-weight: 600;
+      }
+    }
+  }
+}
