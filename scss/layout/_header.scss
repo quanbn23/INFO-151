@@ -14,6 +14,11 @@ header {
     grid-template-columns: 50% auto 4%;
   }
 
+  @include lg {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "logo nav";
+  }
+
   #logo {
     grid-area: logo;
     display: flex;
@@ -25,6 +30,9 @@ header {
     justify-content: flex-end;
     align-items: center;
     grid-area: soccer;
+    @include lg {
+      display: none;
+    }
   }
 
   nav {

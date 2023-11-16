@@ -2,20 +2,31 @@
     Navigation
 ============= */
 
+.showNavs {
+  display: block !important;
+}
+
 a {
   text-decoration: none;
 }
 
-nav {
+#navs {
   ul {
-    li {
+    display: none;
+    @include lg {
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    li {
       flex-direction: column;
       align-items: flex-end;
+      flex-direction: row;
       border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-      //   margin-top: 28px;
-      //   margin-bottom: 28px;
-      padding: 28px 0 28px 0;
+      padding: 28px 30px;
+      @include lg {
+        border: none;
+      }
       a:link,
       a:visited {
         display: inline-block;
@@ -28,28 +39,23 @@ nav {
       }
     }
   }
-  #buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-top: 19px;
-    .sign-in-btn {
-      background-color: #024a58;
-      color: white;
-      border-radius: 8px;
-      padding: 16px 24px;
-      transition: 0.25s;
-      font-weight: 600;
-      border: 1px solid #024a58;
-      margin-right: 16px;
-    }
-    .sign-up-btn {
-      background-color: white;
-      color: #024a58;
-      border-radius: 8px;
-      border: 1px solid #024a58;
-      padding: 16px 24px;
-      font-weight: 600;
-    }
+  .sign-in-btn {
+    background-color: #024a58;
+    color: white;
+    border-radius: 8px;
+    padding: 16px 24px;
+    transition: 0.25s;
+    font-weight: 600;
+    border: 1px solid #024a58;
+    margin-right: 16px;
+    margin-left: 280px;
+  }
+  .sign-up-btn {
+    background-color: white;
+    color: #024a58;
+    border-radius: 8px;
+    border: 1px solid #024a58;
+    padding: 16px 24px;
+    font-weight: 600;
   }
 }

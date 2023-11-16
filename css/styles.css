@@ -366,6 +366,14 @@ p {
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 /* =============
     Forms
 ============= */
@@ -389,14 +397,31 @@ textarea {
 /* =============
     Navigation
 ============= */
+.showNavs {
+  display: block !important;
+}
+
 a {
   text-decoration: none;
 }
 
-nav ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#navs ul {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #navs ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+#navs ul li {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -404,34 +429,28 @@ nav ul li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-direction: row;
+      flex-direction: row;
   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-  padding: 28px 0 28px 0;
+  padding: 28px 30px;
 }
-nav ul li a:link,
-nav ul li a:visited {
+@media (min-width: 1024px) {
+  #navs ul li {
+    border: none;
+  }
+}
+#navs ul li a:link,
+#navs ul li a:visited {
   display: inline-block;
   color: rgba(0, 0, 0, 0.7);
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-nav ul li a:hover,
-nav ul li a:active {
+#navs ul li a:hover,
+#navs ul li a:active {
   color: skyblue;
 }
-nav #buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin-top: 19px;
-}
-nav #buttons .sign-in-btn {
+#navs .sign-in-btn {
   background-color: #024a58;
   color: white;
   border-radius: 8px;
@@ -441,8 +460,9 @@ nav #buttons .sign-in-btn {
   font-weight: 600;
   border: 1px solid #024a58;
   margin-right: 16px;
+  margin-left: 280px;
 }
-nav #buttons .sign-up-btn {
+#navs .sign-up-btn {
   background-color: white;
   color: #024a58;
   border-radius: 8px;
@@ -466,6 +486,13 @@ header {
   header {
     -ms-grid-columns: 50% auto 4%;
     grid-template-columns: 50% auto 4%;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    -ms-grid-columns: 20% auto;
+    grid-template-columns: 20% auto;
+        grid-template-areas: "logo nav";
   }
 }
 header #logo {
@@ -493,11 +520,27 @@ header #soccerball {
           align-items: center;
   grid-area: soccer;
 }
+@media (min-width: 1024px) {
+  header #soccerball {
+    display: none;
+  }
+}
 header nav {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: nav;
+}
+@media (min-width: 1024px) {
+  header #logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  header nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
 }
 
 /* =============
