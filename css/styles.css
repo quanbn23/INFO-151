@@ -404,6 +404,7 @@ nav ul li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
   padding: 28px 0 28px 0;
 }
 nav ul li a:link,
@@ -417,7 +418,7 @@ nav ul li a:hover,
 nav ul li a:active {
   color: skyblue;
 }
-nav ul #buttons {
+nav #buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,7 +431,7 @@ nav ul #buttons {
           justify-content: end;
   margin-top: 19px;
 }
-nav ul #buttons .sign-in-btn {
+nav #buttons .sign-in-btn {
   background-color: #024a58;
   color: white;
   border-radius: 8px;
@@ -441,7 +442,7 @@ nav ul #buttons .sign-in-btn {
   border: 1px solid #024a58;
   margin-right: 16px;
 }
-nav ul #buttons .sign-up-btn {
+nav #buttons .sign-up-btn {
   background-color: white;
   color: #024a58;
   border-radius: 8px;
