@@ -6,50 +6,27 @@ a {
   text-decoration: none;
 }
 
-nav {
+#navigations {
   ul {
     li {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-      //   margin-top: 28px;
-      //   margin-bottom: 28px;
-      padding: 28px 0 28px 0;
+      border-bottom: 1px solid gray;
+      text-align: right;
+
       a:link,
       a:visited {
-        display: inline-block;
-        color: rgba(0, 0, 0, 0.7);
+        color: gray;
+        font-size: rem-calc(18);
         transition: 0.25s;
+        display: inline-block;
+        padding: 28px 31px 28px 0;
+        width: 100%;
+        box-sizing: border-box;
       }
+
       a:hover,
       a:active {
-        color: skyblue;
+        color: #024a58;
       }
-    }
-  }
-  #buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-top: 19px;
-    .sign-in-btn {
-      background-color: #024a58;
-      color: white;
-      border-radius: 8px;
-      padding: 16px 24px;
-      transition: 0.25s;
-      font-weight: 600;
-      border: 1px solid #024a58;
-      margin-right: 16px;
-    }
-    .sign-up-btn {
-      background-color: white;
-      color: #024a58;
-      border-radius: 8px;
-      border: 1px solid #024a58;
-      padding: 16px 24px;
-      font-weight: 600;
     }
   }
 }

@@ -1,3 +1,43 @@
 /* =============
     Buttons
 ============= */
+
+/* =============
+    Buttons
+============= */
+
+button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.signIn-btn {
+  padding: 16px 24px;
+  background-color: #024a58;
+  transition: 0.25s;
+  color: var(--white);
+  border-radius: 8px;
+  border: 1px solid #024a58;
+}
+
+.signIn-btn:hover {
+  background-color: #108fa9;
+  border: 1px solid #108fa9;
+  color: white;
+}
+
+.signUp-btn {
+  border: 1px solid #024a58;
+  padding: 16px 24px;
+  background-color: var(--white);
+  transition: 0.25s;
+  color: #024a58;
+  border-radius: 8px;
+}
+
+.signUp-btn:hover {
+  background-color: gray;
+  border: 1px solid gray;
+  color: var(--white);
+}
