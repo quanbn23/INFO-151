@@ -1,15 +1,19 @@
-var navs = document.querySelector("#navs");
-var soccerBtn = document.querySelector("#soccerball button");
+var nav = document.querySelector("#navigations");
+var signInContainer = document.querySelector("#buttons-container");
+var soccerBtn = document.querySelector("#soccerBall button");
+
 var mainNavVisible = false;
+
 function showNav() {
   if (mainNavVisible === false) {
-    console.log("show nav");
-    navs.classList.add("showNavs");
+    nav.classList.add("showNavs");
+    signInContainer.classList.add("showButtons");
     mainNavVisible = true;
   } else {
-    console.log("hide nav");
-    navs.classList.remove("showNavs");
+    nav.classList.remove("showNavs");
+    signInContainer.classList.remove("showButtons");
     mainNavVisible = false;
   }
 }
+
 soccerBtn.addEventListener("click", showNav);
