@@ -369,9 +369,39 @@ p {
 button {
   border: none;
   background-color: transparent;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
+}
+
+.signIn-btn {
+  padding: 16px 24px;
+  background-color: #024a58;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: var(--white);
+  border-radius: 8px;
+  border: 1px solid #024a58;
+}
+
+.signIn-btn:hover {
+  background-color: #108fa9;
+  border: 1px solid #108fa9;
+  color: white;
+}
+
+.signUp-btn {
+  border: 1px solid #024a58;
+  padding: 16px 24px;
+  background-color: var(--white);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: #024a58;
+  border-radius: 8px;
+}
+
+.signUp-btn:hover {
+  background-color: gray;
+  border: 1px solid gray;
+  color: var(--white);
 }
 
 /* =============
@@ -401,114 +431,132 @@ textarea {
   display: block !important;
 }
 
+.showButtons {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 a {
   text-decoration: none;
 }
 
-#navs ul {
-  display: none;
-}
 @media (min-width: 1024px) {
-  #navs ul {
+  #navigations ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
   }
 }
-#navs ul li {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-  padding: 28px 30px;
+#navigations ul li {
+  border-bottom: 1px solid gray;
+  text-align: right;
 }
 @media (min-width: 1024px) {
-  #navs ul li {
+  #navigations ul li {
     border: none;
+    text-align: center;
+    padding: 16px;
   }
 }
-#navs ul li a:link,
-#navs ul li a:visited {
+#navigations ul li a:link,
+#navigations ul li a:visited {
+  color: gray;
+  font-size: 1.125rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   display: inline-block;
-  color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  padding: 28px 31px 28px 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-#navs ul li a:hover,
-#navs ul li a:active {
-  color: skyblue;
+@media (min-width: 1024px) {
+  #navigations ul li a:link,
+  #navigations ul li a:visited {
+    padding-bottom: 0;
+  }
 }
-#navs .sign-in-btn {
-  background-color: #024a58;
-  color: white;
-  border-radius: 8px;
-  padding: 16px 24px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  font-weight: 600;
-  border: 1px solid #024a58;
-  margin-right: 16px;
-  margin-left: 280px;
-}
-#navs .sign-up-btn {
-  background-color: white;
+#navigations ul li a:hover,
+#navigations ul li a:active {
   color: #024a58;
-  border-radius: 8px;
-  border: 1px solid #024a58;
-  padding: 16px 24px;
-  font-weight: 600;
 }
 
 /* =============
     Header
 ============= */
 header {
-  padding: 22px 24px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 8%;
-  grid-template-columns: auto 8%;
-      grid-template-areas: "logo soccer" "nav nav";
+  -ms-grid-columns: 50% auto;
+  grid-template-columns: 50% auto;
+      grid-template-areas: "logo soccer" "nav nav" "buttons buttons";
 }
 @media (min-width: 768px) {
   header {
-    -ms-grid-columns: 50% auto 4%;
-    grid-template-columns: 50% auto 4%;
+    -ms-grid-columns: auto 30% 4%;
+    grid-template-columns: auto 30% 4%;
+        grid-template-areas: "logo buttons soccer" "nav nav nav";
   }
 }
 @media (min-width: 1024px) {
   header {
-    -ms-grid-columns: 20% auto;
-    grid-template-columns: 20% auto;
-        grid-template-areas: "logo nav";
+    -ms-grid-columns: 25% auto 25%;
+    grid-template-columns: 25% auto 25%;
+        grid-template-areas: "logo nav buttons";
   }
 }
 header #logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
+  padding: 22.5px 0 22.5px 24px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-header #soccerball {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+header #navigations {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+}
+@media (min-width: 1024px) {
+  header #navigations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 28px;
+  }
+}
+header #buttons-container {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: buttons;
+  padding: 19px 31px 21px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,28 +566,88 @@ header #soccerball {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-area: soccer;
 }
-@media (min-width: 1024px) {
-  header #soccerball {
-    display: none;
+header #buttons-container button {
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  header #buttons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
-header nav {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: nav;
+@media (min-width: 1024px) {
+  header #buttons-container {
+    padding-right: 24px;
+  }
+}
+header #soccerBall {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: soccer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 24px 24px 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  header #logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  header #navigations {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  header #buttons-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  header #soccerBall {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
 }
 @media (min-width: 1024px) {
   header #logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-  header nav {
+  header #navigations {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
+  }
+  header #buttons-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+}
+@media (min-width: 1024px) {
+  header #soccerBall {
+    display: none;
   }
 }
 

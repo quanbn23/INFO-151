@@ -3,39 +3,77 @@
 ============= */
 
 header {
-  padding: 22px 24px;
   display: grid;
-  grid-template-columns: auto 8%;
+  grid-template-columns: 50% auto;
   grid-template-areas:
     "logo soccer"
-    "nav nav";
+    "nav nav"
+    "buttons buttons";
 
   @include md {
-    grid-template-columns: 50% auto 4%;
+    grid-template-columns: auto 30% 4%;
+    grid-template-areas:
+      "logo buttons soccer"
+      "nav nav nav";
   }
-
   @include lg {
-    grid-template-columns: 20% auto;
-    grid-template-areas: "logo nav";
+    grid-template-columns: 25% auto 25%;
+    grid-template-areas: "logo nav buttons";
   }
 
   #logo {
     grid-area: logo;
+    padding: 22.5px 0 22.5px 24px;
+    height: 100%;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
   }
 
-  #soccerball {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    grid-area: soccer;
+  #navigations {
+    grid-area: nav;
+
     @include lg {
-      display: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 28px;
     }
   }
 
-  nav {
-    grid-area: nav;
+  #buttons-container {
+    grid-area: buttons;
+    padding: 19px 31px 21px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    button {
+      margin-left: 16px;
+    }
+
+    @include md {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    @include lg {
+      padding-right: 24px;
+    }
+  }
+
+  #soccerBall {
+    grid-area: soccer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px 24px 24px 0;
+    height: 100%;
+    box-sizing: border-box;
+
+    @include lg {
+      display: none;
+    }
   }
 }

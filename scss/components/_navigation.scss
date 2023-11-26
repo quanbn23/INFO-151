@@ -6,56 +6,51 @@
   display: block !important;
 }
 
+.showButtons {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
 a {
   text-decoration: none;
 }
 
-#navs {
+#navigations {
   ul {
-    display: none;
     @include lg {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
+      height: 100%;
     }
     li {
-      flex-direction: column;
-      align-items: flex-end;
-      flex-direction: row;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-      padding: 28px 30px;
+      border-bottom: 1px solid gray;
+      text-align: right;
       @include lg {
         border: none;
+        text-align: center;
+        padding: 16px;
       }
+
       a:link,
       a:visited {
-        display: inline-block;
-        color: rgba(0, 0, 0, 0.7);
+        color: gray;
+        font-size: rem-calc(18);
         transition: 0.25s;
+        display: inline-block;
+        padding: 28px 31px 28px 0;
+        width: 100%;
+        box-sizing: border-box;
+
+        @include lg {
+          padding-bottom: 0;
+        }
       }
+
       a:hover,
       a:active {
-        color: skyblue;
+        color: #024a58;
       }
     }
-  }
-  .sign-in-btn {
-    background-color: #024a58;
-    color: white;
-    border-radius: 8px;
-    padding: 16px 24px;
-    transition: 0.25s;
-    font-weight: 600;
-    border: 1px solid #024a58;
-    margin-right: 16px;
-    margin-left: 280px;
-  }
-  .sign-up-btn {
-    background-color: white;
-    color: #024a58;
-    border-radius: 8px;
-    border: 1px solid #024a58;
-    padding: 16px 24px;
-    font-weight: 600;
   }
 }
