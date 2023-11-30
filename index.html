@@ -16,10 +16,33 @@
     />
 
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Week 7 Step 4 JS</title>
+    <title>Week 8 Sign Up Modal</title>
   </head>
 
   <body>
+    <section id="sign-up-container">
+      <form action="#">
+        <div id="close-button-container">
+          <button class="close-btn" id="close-sign-up-modal-btn">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="text" placeholder="Address" />
+        <input type="text" placeholder="State" />
+        <input type="text" placeholder="Zip Code" />
+        <input type="text" placeholder="Phone Number" />
+        <input type="text" placeholder="Email" />
+
+        <div id="sign-up-btn-container">
+          <button class="send-btn">Send</button>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </section>
+
     <header>
       <section id="logo">
         <img src="img/logo.svg" alt="website logo" />
@@ -44,12 +67,13 @@
 
       <section id="buttons-container">
         <button class="signIn-btn">Sign In</button>
-        <button class="signUp-btn">Sign Up</button>
+        <button class="signUp-btn" id="sign-up-btn">Sign Up</button>
       </section>
 
       <section id="soccerBall">
         <button>
           <i class="fa-solid fa-futbol"></i>
+          <i class="fa-solid fa-x"></i>
         </button>
       </section>
     </header>
