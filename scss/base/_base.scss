@@ -19,6 +19,10 @@ ul {
   display: flex !important;
 }
 
+.hide-x {
+  display: none !important;
+}
+
 .hide-soccerball {
-  display: none;
+  display: none !important;
 }
