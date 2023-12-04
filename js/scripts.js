@@ -1,3 +1,5 @@
+Fancybox.bind();
+
 //show and hide navigations
 var nav = document.querySelector("#navigations");
 var signInContainer = document.querySelector("#buttons-container");

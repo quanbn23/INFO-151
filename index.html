@@ -15,8 +15,13 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Week 8 Sign Up Modal</title>
+    <title>Week 10 Fancy Apps</title>
   </head>
 
   <body>
@@ -80,6 +85,54 @@
 
     <section id="hero"></section>
 
+    <section id="fancybox">
+      <div id="fb-grid-item">
+        <h1>Fancy Box</h1>
+        <ul>
+          <li>
+            <a
+              href="img/earth.jpg"
+              data-fancybox,
+              data-fancybox="gallery-1"
+              ,
+              data-caption="Earth"
+              ><img src="img/earth.jpg" alt="Earth"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="img/moon.jpg"
+              data-fancybox,
+              data-fancybox="gallery-1"
+              ,
+              data-caption="Moon"
+              ><img src="img/moon.jpg" alt="Moon"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="img/neptune.jpg"
+              data-fancybox,
+              data-fancybox="gallery-1"
+              ,
+              data-caption="Neptune"
+              ><img src="img/neptune.jpg" alt="Neptune"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="img/sun.jpg"
+              data-fancybox,
+              data-fancybox="gallery-1"
+              ,
+              data-caption="Sun"
+              ><img src="img/sun.jpg" alt="Sun"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <div id="validation-btn">
       <a
         href="https://validator.w3.org/nu/?doc=https://week-8-9-sign-up-form--info-151-900.netlify.app/"
@@ -89,6 +142,7 @@
       </a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/scripts-dist.js"></script>
   </body>
 </html>
