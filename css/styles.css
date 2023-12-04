@@ -833,3 +833,39 @@ header #soccerBall button {
 #fancybox #fb-grid-item ul li img {
   width: 100%;
 }
+
+#aos-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: 80px;
+}
+#aos-container #aos-grid-item {
+  text-align: center;
+}
+#aos-container #aos-grid-item h1 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+#aos-container #aos-grid-item ul {
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 100%;
+}
+#aos-container #aos-grid-item ul li {
+  width: 100%;
+}
+#aos-container #aos-grid-item ul li img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

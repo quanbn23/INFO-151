@@ -1,5 +1,13 @@
 Fancybox.bind();
 
+AOS.init();
+
+AOS.refresh();
+
+document.addEventListener("aos:out", ({ detail }) => {
+  console.log("animated out", detail);
+});
+
 //show and hide navigations
 var nav = document.querySelector("#navigations");
 var signInContainer = document.querySelector("#buttons-container");
