@@ -840,7 +840,7 @@ header #soccerBall button {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   place-items: center;
-  padding: 80px;
+  padding: 200px;
 }
 #aos-container #aos-grid-item {
   text-align: center;
@@ -856,7 +856,7 @@ header #soccerBall button {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 30px;
   max-width: 100%;
 }
 #aos-container #aos-grid-item ul li {
