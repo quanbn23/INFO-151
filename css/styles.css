@@ -426,7 +426,6 @@ button {
   color: var(--white);
   border-radius: 8px;
   border: 1px solid rgb(200, 200, 200);
-  margin-right: 10px;
 }
 
 .send-btn:hover {
@@ -443,6 +442,7 @@ button {
   transition: 0.25s;
   color: white;
   border-radius: 8px;
+  margin-right: 10px;
 }
 
 .cancel-btn:hover {
