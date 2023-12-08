@@ -13,6 +13,7 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --orange: #D87337;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -366,3 +367,54 @@ textarea {
 /* =============
     Footer
 ============= */
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+#second-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% auto;
+  grid-template-columns: 50% auto;
+      grid-template-areas: "leftimage quote";
+}
+#second-container #left-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: leftimage;
+}
+#second-container #we-believe-quote {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: quote;
+  text-align: center;
+  border-style: solid;
+  border: 2px solid var(--orange);
+  border-left: none;
+  border-right: none;
+  margin: 265.5px 0 265.5px 16px;
+}
+
+#gallery-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+      grid-template-areas: "one twothree";
+}
+#gallery-container #gallery-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+#gallery-container #gallery-2-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: twothree;
+}
