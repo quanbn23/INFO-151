@@ -1,0 +1,53 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+#second-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% auto;
+  grid-template-columns: 50% auto;
+      grid-template-areas: "leftimage quote";
+}
+#second-container #left-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: leftimage;
+}
+#second-container #we-believe-quote {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  display: inline;
+  grid-area: quote;
+  text-align: center;
+  border-style: solid;
+  border: 2px solid var(--orange);
+  border-left: none;
+  border-right: none;
+  margin: 265.5px 0 265.5px 16px;
+}
+
+#gallery-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
+      grid-template-areas: "one two three";
+}
+#gallery-container #gallery-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+#gallery-container #gallery-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+#gallery-container #gallery-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: three;
+}

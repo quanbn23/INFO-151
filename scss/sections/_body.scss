@@ -28,12 +28,28 @@ img {
 
 #gallery-container {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: "one twothree";
+  grid-template-columns: auto auto auto;
+  grid-template-areas: "one two three";
+
   #gallery-1 {
     grid-area: one;
   }
-  #gallery-2-3 {
-    grid-area: twothree;
+  #gallery-2 {
+    grid-area: two;
+    // img {
+    //   width: 50%;
+    //   height: 50%;
+    // }
+  }
+  #gallery-3 {
+    grid-area: three;
   }
 }
+
+// #last-container {
+//   #bike-decoration {
+//     img {
+//       border-radius: 100%;
+//     }
+//   }
+// }
